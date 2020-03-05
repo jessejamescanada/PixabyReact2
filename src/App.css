@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+*{box-sizing: border-box;}
+body{
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  background-color: #F7F6F4;
 }
 
-.App-link {
-  color: #61dafb;
+
+.imageList{
+  margin: 5px;
+}
+.imageList img{
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.imageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 1500px
+}
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer input{
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.formContainer h2{
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.btn{
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 200px;
+  margin-top: 0px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  background-color: #9CADCE;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.btn:hover{
+  background-color: rgba(156, 173, 206, 0.692);
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.topBTN{
+  padding: 10px 20px;
+  width: 150px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  background-color: #F4989C;
+  color: #fff;
+  cursor: pointer;
+}
+.loadBTN{
+  padding: 10px 20px;
+  width: 150px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  background-color: #F4989C;
+  color: #fff;
+  cursor: pointer;
+}
+
+.loadBTN:focus, .topBTN:focus, .btn:focus{
+  outline: 0;
+}
+.loadBTN:hover, .topBTN:hover{
+  background-color: rgba(244, 152, 157, 0.678);
+}
+
+@media(max-width: 1400px){
+  .imageContainer{
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+
+@media(max-width: 1100px){
+  .imageContainer{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+
+@media(max-width: 750px){
+  .imageContainer{
+    width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
+@media(max-width: 500px){
+  .imageContainer{
+    width: 100%;
+  }
+  .buttonContainer{
+    margin: 5px;
+  }
+}
+/* error if search returns no results. Try to have more images then 12 loaded but some hidden with a button to show the rest */
