@@ -12,6 +12,12 @@ body{
   background-color: #F7F6F4;
 }
 
+.err{
+  text-align: center;
+  color: firebrick;
+  font-size: 24px;
+  margin-top: 2px;
+}
 
 .imageList{
   margin: 5px;
@@ -42,6 +48,7 @@ body{
   border: none;
   border-radius: 5px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .formContainer h2{
