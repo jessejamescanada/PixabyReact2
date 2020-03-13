@@ -12,7 +12,7 @@ export default class SearchBar extends Component {
 
   handleFormSubmit = e => {
     e.preventDefault();
-    const newTerm = this.state.term;
+    const newTerm = this.state.term
     this.setState({ term: newTerm });
     localStorage.setItem("term", this.state.term);
     this.props.newSubmit(this.state.term);
