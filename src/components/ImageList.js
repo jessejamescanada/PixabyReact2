@@ -8,7 +8,6 @@ export default class ImageList extends Component {
   };
 
   showModal = (id, largeImageURL) => {
-    console.log(id);
     this.setState({ ids: id, largeURL: largeImageURL });
     const modal = document.querySelector(".modal");
     modal.style.display = "block";
