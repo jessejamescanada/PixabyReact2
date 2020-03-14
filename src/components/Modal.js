@@ -17,11 +17,22 @@ export default class Modal extends Component {
     }
   };
 
+  closeModalX = e => {
+    const modalX = document.querySelector(".modalX");
+    const modal = document.querySelector('.modal')
+    if (e.target === modalX) {
+      modal.style.display = "none";
+    }
+  };
+
   render() {
     return (
       <div className="modalCSS">
         <div className="modal">
           <div className="modal-content">
+            <p className="modalX" onClick={this.closeModalX}>
+              X
+            </p>
             <img
               src={this.props.img}
               key={this.props.ids}
